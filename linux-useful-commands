@@ -1,0 +1,88 @@
+# make new directory
+
+mkdir
+
+# copy all files same filename one folder
+
+find ./ -name '*.pdf' -exec cp -prv '{}' 'new' ';'
+
+# find all file names that extension all directories
+
+find -name "*pdf" ! -name "pdf_*"
+
+# search filename's strings/text name
+
+find -name "*.css" ! -name "css_*" | xargs grep -H "#179d09"
+ls *.css -r | select-string "#179d09"
+grep -r --include="*.css" "#179d09" ./
+
+# Searching for a File
+
+find . -name "Search for files:"
+
+# Searching for a text/string within a directory
+
+grep -H -r "Search for text:" *  | cut -d: -f1
+
+# https://stackoverflow.com/questions/15617016/copy-all-files-with-a-certain-extension-from-all-subdirectories
+
+# extract zip files in winSCP
+# open terminal console ctrl+t
+# inpute this command and execute
+
+unzip -d "public_html" "gts.zip"
+
+# show a list of installed software on local machine in windows 10 with powershell
+
+Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | Format-Table –AutoSize > C:\Users\George Czan\Downloads\InstalledPrograms-PS.txt
+
+# WinSCP FTP Client - Commands
+
+# Archiving
+
+# Tar/Gzip
+
+tar -xvzf --directory="&Extract to which directory:?.!" "!"
+tar -czvf "&Enter an Archive Name:?archive.tgz!"
+  --exclude="&Exclude files matching pattern:?*.exe!"
+ 
+
+# Zip
+
+# To unpack to the current directory:
+
+unzip "!"
+
+# To unpack to an alternate directory:
+
+unzip -d "&Extract to directory:?.!" "!"
+
+# To create an archive:
+
+zip -r "&Enter an Archive Name:?archive.zip!"
+
+# Rar
+
+rar a -ep "&Enter an Archive Name:?archive.rar!"
+
+# Changing Ownership
+
+chown "New owner:"
+
+# To change group use chgrp instead of chown. Or use following command:
+
+chown "New owner (and group: user:group):!"
+
+# or with two separate prompts:
+
+chown "New owner":"New group" ./ -R
+
+chown apache:apache ./ -R
+
+# find own external IP address in PowerShell
+
+telnet myip.gelma.net
+
+# find network info local machine localhost private IP address
+
+ipconfig /all
