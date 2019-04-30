@@ -32,7 +32,7 @@ grep -H -r "Search for text:" *  | cut -d: -f1
 
 unzip -d "public_html" "gts.zip"
 
-# show a list of installed software on local machine in windows 10 with powershell
+# POWERSHELL ONLY show a list of installed software on local machine in windows 10 with powershell
 
 Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | Format-Table –AutoSize > C:\Users\George Czan\Downloads\InstalledPrograms-PS.txt
 
@@ -52,6 +52,10 @@ tar -czvf "&Enter an Archive Name:?archive.tgz!"
 # To unpack to the current directory:
 
 unzip "!"
+
+# unzip files in putty bash example:
+
+unzip archive.zip
 
 # To unpack to an alternate directory:
 
@@ -77,12 +81,96 @@ chown "New owner (and group: user:group):!"
 
 chown "New owner":"New group" ./ -R
 
+# example adding user to group
+
 chown apache:apache ./ -R
 
-# find own external IP address in PowerShell
+# PowerShell - find own public IP address in PowerShell
 
 telnet myip.gelma.net
 
 # find network info local machine localhost private IP address
 
 ipconfig /all
+
+# list all folders one line / inline
+
+ls | xargs
+
+# indent - / +
+
+ctrl + [
+ctrl + ]
+
+# commenting
+
+ctrl + /
+
+# Check the physical free memory of the system
+
+top
+
+# Check free space of the system hard disk.
+
+df –h
+
+# Check  for error messages
+
+ntpq -p
+
+# Shows processes currently running on the system.
+
+ps -ef
+
+# Shows up active TCP connections
+
+ps -aux
+
+# Compare a remote file with a local file
+
+ssh user@host cat /path/to/remotefile | diff /path/to/localfile -
+
+# How to move into another directory
+
+cd
+
+# How to go to home directory
+
+cd ~
+
+# How to show the full path of the current directory
+
+pwd
+
+# How to search for a file starting within current directory
+
+find . -name [filename] -print
+
+# How to search for text within a file
+
+grep
+grep 'word' filename
+grep 'word' file1 file2 file3
+grep 'string1 string2'  filename
+
+# To compress one file or folder to a tar file
+
+tar -cvf archieve.tar file
+
+# To compress files or folders excluding some directories
+
+tar -cvf archieve.tar file --exclude "directory"
+tar -cvf archieve.tar file --exclude "directory1" "directory2"
+
+# To extract a tar file
+
+tar -xvf file.tar
+
+# Download a file from server to your computer
+
+scp username@host:/path/to/hosts/file/host_file.txt ~/desktop
+
+# Upload a file from your computer to the server
+
+scp ~/desktop/file.txt username@host:/path/to/hosts/folder
+
