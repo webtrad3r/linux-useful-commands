@@ -1,0 +1,6 @@
+This is easy. By default the stfp-server of a Raspberry Pi is located at: /usr/lib/sftp-server, so we need to get WinSCP to execute it with sudo.
+
+Go to your WinSCP profile (Session > Sites > Site Manager)
+Click on Edit > Advanced... > Environment > SFTP
+Insert sudo su -c /usr/lib/sftp-server at "SFTP Server"
+Save and connect
