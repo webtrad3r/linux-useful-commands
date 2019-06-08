@@ -1,0 +1,3 @@
+netstat -ano
+
+then look for established + pid, then check task manager to see if pid is safe
