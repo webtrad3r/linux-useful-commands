@@ -610,7 +610,7 @@ chown wrgroup:wrgroup .htaccess
 
 
 
-chown apache:apache ./ -R
+chown admin:admin ./ -R
 
 find * -type d -print0 | xargs -0 chmod 0755
 
