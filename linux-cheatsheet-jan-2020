@@ -733,9 +733,12 @@ dig +short myip.opendns.com @resolver1.opendns.com
 mysqldump -u USERNAME -p NAME_OF_DATABASE > /path/to/file/export.sql
 
 
-
 mysqldump -u the_user -p the_the > thedb.sql
 
+
+#fastest way if logged in as ROOT
+
+mysqldump --opt admin_bikini > bikinioffers.sql
 
 
 # more examples of backing up from command line
