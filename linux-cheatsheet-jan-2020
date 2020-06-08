@@ -210,7 +210,7 @@ chown "New owner":"New group" ./ -R
 
 
 
-chown apache:apache ./ -R
+chown admin:admin ./ -R
 
 
 
