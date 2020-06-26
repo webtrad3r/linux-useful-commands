@@ -185,7 +185,7 @@ rar a -ep "&Enter an Archive Name:?archive.rar!"
 
 
 
-chown "New owner:"
+"New owner:"
 
 
 
@@ -608,13 +608,19 @@ chown wrgroup:wrgroup * -R
 chown wrgroup:wrgroup .htaccess
 
 
+-----------------------------------------------------------
+# get latest version and install of wordpress in putty
+
+wget https://wordpress.org/latest.tar.gz
+
+tar -xzvf latest.tar.gz
 
 chown admin:admin ./ -R
 
 find * -type d -print0 | xargs -0 chmod 0755
 
 find * -type f -print0 | xargs -0 chmod 0644
-
+-----------------------------------------------------------
 
 
 # display space used by each subdirectory in current directory
@@ -781,16 +787,6 @@ mysql -u root -p[root_password] [database_name] < dumpfilename.sql
 
 
 ^\s*$\n
-
-
-
-# get latest version and install of wordpress in putty
-
-
-
-wget https://wordpress.org/latest.tar.gz
-
-tar -xzvf latest.tar.gz
 
 
 
