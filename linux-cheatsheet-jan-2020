@@ -851,3 +851,8 @@ download csv export sample first then follow pattern, left goes source relative 
 # how to scrape a website using wget in putty on your server and create a folder
 
 wget --recursive --html-extension --page-requisites --convert-links http://thelearn2group.org.uk
+
+
+# Where is my PHP php.ini Configuration File Located?
+
+php -i | grep "Loaded Configuration File"
