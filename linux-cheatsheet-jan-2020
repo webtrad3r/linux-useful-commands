@@ -856,3 +856,9 @@ wget --recursive --html-extension --page-requisites --convert-links http://thele
 # Where is my PHP php.ini Configuration File Located?
 
 php -i | grep "Loaded Configuration File"
+
+# delete all lines that contains that string (in text editors: visual studio code)
+# open find and replace, and in replace leave blank, select the RegEX obviously then in find box write this and press replace all button:
+^.*string.*\n
+
+
