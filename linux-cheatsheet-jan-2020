@@ -861,4 +861,9 @@ php -i | grep "Loaded Configuration File"
 # open find and replace, and in replace leave blank, select the RegEX obviously then in find box write this and press replace all button:
 ^.*string.*\n
 
+# very useful command for storage space info digging
+
+[root@server /]# du -h / |grep ^[0-999.]*G
+
+
 
