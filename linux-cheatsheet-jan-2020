@@ -4,6 +4,10 @@
 mkdir
 
 
+# how to find the php.ini file when increasing memory for wordpress sites
+
+php -i | grep php.ini
+
 
 # super powerful command to find text strings inside any file / a text file
 
