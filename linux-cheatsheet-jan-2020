@@ -569,7 +569,15 @@ right click
 
 # delete all files and folders in putty / bash / linux
 
+# the actual command to remove everything in directory is :
 
+rm -rf *
+
+# to remove all files only but keep directories is:
+
+rm -rf *.*
+
+__________________
 
 rm -rf /path/to/directory
 
