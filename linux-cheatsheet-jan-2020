@@ -877,5 +877,10 @@ php -i | grep "Loaded Configuration File"
 
 [root@server /]# du -h / |grep ^[0-999.]*G
 
+hostname -i
+hostname -I
+ctrl +r
+ctrl +l
+ctrl +d
 
 
